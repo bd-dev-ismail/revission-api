@@ -31,6 +31,8 @@ const loadSearch = () =>{
     const searchText = searchField.value;
     searchField.value = '';
     loadSport(searchText);
+    const spinner = document.getElementById('spinner');
+    spinner.style.display = 'none';
 }
 const loadDetail = player =>{
     const url = `https://www.thesportsdb.com/api/v1/json/2/lookupplayer.php?id=${player}`;
@@ -54,4 +56,4 @@ const displayDetail = playerInfo =>{
     `;
     detailContainer.appendChild(detailDiv)
 }
-loadSport('') ;
+// loadSport('') ;
